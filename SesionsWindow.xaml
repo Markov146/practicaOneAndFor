@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp20.SesionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp20"
+        mc:Ignorable="d"
+        Title="SesionsWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="233*"></RowDefinition>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="110*"/>
+
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="CinemaDataGrid" Grid.ColumnSpan="3" />
+        <TextBox x:Name="Vvod" Grid.ColumnSpan="2" Margin="0,233,0,0" Grid.RowSpan="2" />
+        <Button x:Name="Dob" Grid.ColumnSpan="2" Grid.Row="1" Content="Добавить" Click="add_Click" Margin="0,41,0,80" Grid.RowSpan="3"/>
+        <TextBox x:Name="Vvodi" Grid.Column="1" Margin="266,232,0,1" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2"   />
+        <Button x:Name="izm" Grid.RowSpan="3"  Grid.Column="1" Content="Изменить" Click="edit_Click" Grid.ColumnSpan="2" Margin="266,40,1,80" Grid.Row="1"/>
+        <Button x:Name="clos" Content="Выйти" Grid.ColumnSpan="2" Grid.Row="3" Margin="0,30,0,0" Click="close_click" />
+        <Button x:Name="del" Grid.Row="3" Grid.Column="1"  Content="Удалить" Click="del_Click" Margin="266,30,0,0" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
